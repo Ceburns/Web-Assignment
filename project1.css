@@ -1,0 +1,47 @@
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+.background{
+    background-image: url("Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width:100;
+    
+}
+
+.about{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h4{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.pictures{
+    display: flex;
+    gap: 20px
+}
+.pictures img{
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+}
+
+h5{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}

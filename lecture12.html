@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <body> 
+        <head> 
+            <meta charset="utf-8"> <!-- charset --> 
+            <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- viewport -->
+            <!-- Bootstrap Lib -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+            
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        </head>
+
+        <div class="p-5 mt-2 bg-success text-white text-center">
+            <div class="container"> 
+                <h1> CS 456 - Lecture 12</h1>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-12 col-md-3 d-grid">
+                    <button class="btn btn-success" onclick="sayHello();"> Say Hello
+                        
+                    </button>
+
+                </div>
+                <div col="col-12 col-md-3">
+                    <a href="http:/www.loyola.edu" class="link-success" onclick=" return areYouSure();"> 
+                        Loyola University Maryland</a>
+                        
+                    <a href="javascript:alertHello();">
+                            say hello link
+                    </a>
+
+                    <a href="#" onclick="window.alert('Hi!')">
+                        example
+                    </a>
+
+
+                </div>
+            
+
+            </div>
+
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="lecture12.js"> </script>
+    <script src="lecture13.js"></script>
+    <script>
+        // careful when comparing types in javascript
+        // 10 == "10" true
+        // 10 === "10" false
+        window.alert(10 !== "10");  
+    </script>
+</html>

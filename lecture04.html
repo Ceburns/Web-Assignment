@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- style="background-color:#000000;color:#ffffff" -->
+  <h1> Example POST Form </h1>
+  <form action="http://localhost:3000" method="post" >
+    <p> <label for="fname"> First Name: </label>
+        <input type="text" name="fname" value="Hello"/> <br/>
+        <label for="lastname"> Last Name: </label>      
+            <input type="text" name="lastname" /> <br/>
+        <label> Password: </label>
+        <input type="password" name="pwd" /> <br/>
+        <label> Number: </label>
+        <input type="number" name="txt_number" value="42"/><br />
+        <input type="range" name="'txt_range" min="0" max="50"/><br/>
+        
+        <textarea name="mytextarea" row="5"> Text </textarea> <br />
+        <input  type="checkbox" name="check" checked/> <label>
+            Check to subscrbibe
+        </label><br/>
+        <input type="radio" name="rad_options" value="1" checked/> <label>Option 1</label>
+        <input type="radio" name="rad_options" value="2"/> <label>Option 2</label>
+        <input type="radio" name="rad_options" value="3"/> <label>Option 3</label><br/>
+        <!--For a radio to understand that only one option can be checked, they must have the same name(belong to the same group) with different values-->
+        <br/>
+        
+        Favorite Language:
+        <select name="language">
+            <option value="0"> Choose One</option>
+            <option value="js">JavaScript</option>
+            <option value="sm">Smalltalk</option>
+            <option value="java" >Java</option>
+        </select><br/>
+        <br/>
+
+        <label for="flc"> </label>
+        File: <input /><br/>
+        <br/>
+
+        <!-- Can create hidden fields to hide IDs but if you look at source you can see hidden fields-->
+        <!-- Can store info that is necessary for the back end-->
+        <input type="hidden" name="id_product" value="42"/>
+
+
+
+
+        <input type="submit" value="Send" /> 
+        <input type="reset" />
+        <input type="button" value="Nothing" onclick="alert('Hi')"/> 
+        <!--Every button and every element should have an on click button-->
+        <button type="submit"> This is a button <br/> really!</button>
+        <!--<input type="image" src="clickimage.png"/> -->
+    </p>
+
+  </form>
+</body>
+
+    
+</html>

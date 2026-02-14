@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Hello </title>
+  </head>
+  <body>
+    <h1> Page 1 </h1>
+    <p> Hello World! 
+        <button onclick="changeLinks();"> Change all Links!</button></p>
+    <p> Hello again
+       <a href="p.html"> link </a>. 
+    </p>
+    <p> Hello again
+       <a href="a.html">link </a>.
+    </p>
+    <p>
+        <form action="" method="post">
+            <label for="txt_login"> Login: </label> 
+            <input type="email" name="txt_login" id="txt_login"/><br/>
+            <label for="txt_pass"> Password: </label> 
+            <input type="password" name="txt_pass" id="txt_pass"/> 
+            <input type="checkbox" name="chk_show_pass" id="chk_show_pass" 
+            onclick="showHidePassword();" /> 
+            <label for="chk_show_pass">Show Password</label> <br/>
+            <input type="submit" /> <input type="reset" />
+        </form>
+    </p>
+
+
+  </body>
+  <script>
+    function changeLinks(){
+        let links= document.getElementByTagName("a");
+        for(let a of links){
+            a.innerHTML="Changed Link";
+            a.setAttribute("href","http://www.google.com");
+            a.setAttribute("style","color:green;");
+        }
+    }
+
+    function showHidePassword(){
+        let ckbox = document.getElementById("chk_show_pass");
+        let pwdField = document.getElementById("txt_pass");
+
+        if(ckbox.checked===true){
+            pwdField.setAttribute("type","password");
+        } else {
+
+        }
+    }
+  </script>
+</html>
+
+

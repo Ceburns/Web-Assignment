@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <body> 
+        <head> 
+            <meta charset="utf-8"> <!-- charset --> 
+            <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- viewport -->
+            <!-- Bootstrap Lib -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+            
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        </head>
+
+        <div class="p-5 mt-2 bg-success text-white text-center">
+            <div class="container"> 
+                <h1> CS 456</h1>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-12 col-md-3 d-grid">
+                    <button class="btn btn-success" onclick="sayHello">
+                        
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script>
+            j=0;
+            var message="hello";
+            var str= 'another string';
+            var str2 = `asasas
+                asasa
+                asasa ${i}
+            `;
+            let i=0;
+            const pi=3.1415;
+
+            let b1= true;
+            let b2= false;
+
+            var number= 1 + 5 + "7"; //67
+            var num2= "7"+1+5; //715
+
+            const obj = {name:'Stuednt', major:'CS', enrolled:true,
+                semester:6
+            };
+            obj.name = "Jane Doe";
+
+            const arr = [1,2,3];
+            arr[0] = 10;
+
+            var myVar= function(){return 1;}
+
+            if(1==0){
+                //do something here
+            }
+
+            for(let j=0; j<10; j++){
+                //initialization;condition;increment
+                //standard for increment loop
+            }
+
+            for(let item of arr){
+
+            }
+            for(let attribute in obj){
+                //get each attribute of an object
+            }
+
+            const prof = {id:1,name:'Henrique',last:'Rocha'}; //object
+            let out = "";
+            for(let k in prof){// for-in creates an index.
+            out += "("+ prof[k] +") ";
+            }
+
+            const primes = [2,3,5,7,11,13]; // array
+            let text = "";
+            for(let p of primes){ // try sub of/in to see the difference 
+            text += p +"; "; // for-of = for each element in array
+            } 
+            console.log(out+"\n"+text); // display on console.
+
+            //window.alert("welcome to my page");
+            //let opt = window.confirm("Do you want to proceed?");
+            //window.alert( opt );
+
+            let typedname = window.prompt("what is your name?");
+
+            function sayHello(){
+                return "hello world";
+            }
+
+            const helloAgain = function(){
+                return "Hello Again";
+            }
+
+
+
+
+
+
+
+
+        </script>
+
+
+
+
+    </body>
+</html> 
