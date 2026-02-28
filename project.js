@@ -12,7 +12,7 @@ function hideReviews(){
 function showReviews(){
     document.getElementById("reviews").setAttribute("style", "display: flex;");
 }
-
+ 
 function resetForm(){
     document.getElementById("fname").value = "";
     document.getElementById("email").value = "";
