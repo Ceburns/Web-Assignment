@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/> <!-- charset-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+              rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+              crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
+        <link rel="stylesheet" type="text/css" href="project1.css"/>
+    </head>
+    <body>
+        <div class="p-4 mt-1 bg-success text-white text-center">
+            <div class="container-fluid">
+                <h1>Menu Requests</h1> 
+            </div>
+        </div>
+
+        <div>
+            <nav class="navbar navbar-expand-sm bg-light">
+                <div class="container-fluid"> 
+                    <ul class="navbar-nav">
+                        <li class="nav-item"> <a href="index.html" class="nav-link"> Home <i class="bi bi-house-fill"></i></a> </li> 
+                        <li class="nav-item"> <a href="menuReqs.html" class="nav-link"> Menu Requests <i class="bi bi-pencil-fill"></i></a> </li>
+                        <li class="nav-item"> <a href="#" class="nav-link"> Menus <i class="bi bi-fork-knife"></i></a> </li>
+                        <li class="nav-item"> <a href="#" class="nav-link"> Events <i class="bi bi-calendar-event-fill"></i></a></li>
+                        <li class="nav-item"> <a href="#" class="nav-link"> About Us <i class="bi bi-info-circle-fill"></i></a> </li>
+                        <li class="nav-item"> <a href="#" class="nav-link"> Contact <i class="bi bi-telephone-fill"></i></a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services <i class="bi bi-list"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Catering</a></li>
+                                <li><a class="dropdown-item" href="#">Menu Curation</a></li>
+                                <li><a class="dropdown-item" href="#">Meal Planning</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="background"></div><br/>
+
+        <div class="container-fluid text-center">
+            <h2>Meal Requests</h2>
+            <div class="row mt-3">
+                <div class="col">
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mealFormModal" onclick="resetMealForm();">
+                        <h5>New Meal Request</h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="row">
+            <div class="col">
+                <div class="container-fluid">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                           <tr>
+                                
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Meal Type</th>
+                                <th>Meal</th>
+                           </tr>
+                        </thead>
+                        <tbody id="mealdata"></tbody>
+                    </table>         
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="mealFormModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-success text-white">
+                        <h5 class="modal-title">Meal Request</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <form id="mealform" action="http://localhost:4000/menuReq" method="post" class="was-validated">
+                        <div class="modal-body">
+
+                            <div class="mb-2">
+                                <label for="txt_name" class="form-label">Name</label>
+                                <input class="form-control" type="text" id="txt_name" name="txt_name" required>
+                            </div>
+
+                            <div class="mb-2">
+                                <label for="txt_email" class="form-label">Email</label>
+                                <input class="form-control" type="email" id="txt_email" name="txt_email" required>
+                            </div>
+
+                            <div class="mb-2">
+                                <label for="txt_mealType" class="form-label">Meal Type</label>
+                                <select class="form-control" id="txt_mealType" name="txt_mealType" required>
+                                    <option value="">Choose One</option>
+                                    <option value="Appetizer">Appetizer</option>
+                                    <option value="Entree">Entree</option>
+                                    <option value="Side">Side</option>
+                                    <option value="Dessert">Dessert</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-2">
+                                <label for="txt_meal" class="form-label">Meal</label>
+                                <input class="form-control" type="text" id="txt_meal" name="txt_meal" required>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <button type="reset" class="btn btn-warning">Clear</button>
+                            <button type="submit" class="btn btn-success">Save</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                crossorigin="anonymous"></script>
+
+        <script>
+            let meals = [];
+
+            async function getMealData() {
+                let response = await fetch('/menuReq');
+                meals = await response.json();
+                
+                let output = "";
+                for (let i = 0; i < meals.length; i++) {
+                    output += `<tr>
+                                <td>
+                                    <a href="#" onclick="editMealModal(${i})" data-bs-toggle="modal" data-bs-target="#mealFormModal">
+                                        <i class="bi bi-pencil-square text-primary"></i>
+                                    </a>
+                                    &nbsp;
+                                    <a href="/deletemeal/${meals[i].email}" onclick="return confirmDelete();">
+                                        <i class="bi bi-trash-fill text-danger"></i>
+                                    </a>
+                                </td>
+                                <td>${meals[i].name}</td>
+                                <td>${meals[i].email}</td>
+                                <td>${meals[i].mealType}</td>
+                                <td>${meals[i].meal}</td>
+                            </tr>`;
+                }
+
+                document.getElementById("mealdata").innerHTML = output;
+            }
+
+            function editMealModal(index) {
+                document.getElementById("txt_name").value = meals[index].name;
+                document.getElementById("txt_email").value = meals[index].email;
+                document.getElementById("txt_mealType").value = meals[index].mealType;
+                document.getElementById("txt_meal").value = meals[index].meal;
+            }
+
+            function resetMealForm() {
+                document.getElementById("mealform").reset();
+            }
+
+            function confirmDelete() {
+                return confirm("Are you sure you want to delete this meal?");
+            }
+
+            getMealData();
+        </script>
+    </body>
+</html>

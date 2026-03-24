@@ -35,7 +35,9 @@ h3{
 h4{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
+
 }
+
 
 .pictures{
     display: flex;
@@ -49,4 +51,13 @@ h4{
 
 h5{
     font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+th{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+td{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
 }

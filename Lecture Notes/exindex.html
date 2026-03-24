@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" /> <!-- charset -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- viewport -->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" /> <!-- Bootstrap CSS -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!-- Icons library -->
+    </head>
+    <body>
+        <header class="p-5 bg-primary text-white text-center">
+            <div class="container">
+                <h1> CS456 Web Programming App </h1>
+            </div>
+        </header> <!-- Do not confuse <header> (semantic div) with <head> -->
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <i class="bi bi-house-fill"></i> Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto w-100 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="userpage.html">Users</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+
+                    <li class="nav-item dropdown ms-auto">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end ms-auto">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>    
+        
+        <div class="container d-flex flex-column min-vh-100">
+            <div class="row mt-3">
+                <div class="col-12">
+                    <h2> Welcome to CS456 Example App </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3>Course Description </h3>
+                    <p> This course Web programming in the back-end (server side programming) and front-end (client side programming). Server side topics including Node JS, Restful service, form processing, NoSQL database access, managing persistent data, maintaining state, web site design layered architecture, web site security. Client-side topics include JavaScript programming, the Document Object Model, accessing CSS with Javascript, creating customized HTML widgets, AJAX, XML, JSON, and libraries/frameworks such as React JS and Bootstrap.</p>
+
+                    <img src="./images/mern.png" class="img-fluid mb-2" /> 
+
+<h3>Learning Outcomes</h3>
+<ol>
+    <li> I can create and format a web page using appropriate client-side languages (such as HTML, CSS, JavaScript), including images, hyperlinks, and tables.</li>
+    <li> I can build dynamic web pages.</li>
+<li> I can use modern development techniques.</li>
+<li> I can develop server-side scripts that retrieve and store information in a file or database.</li>
+<li> I understand when to place functionality on the client-side or server-side.</li>
+<li> I can design web sites by applying contemporary principles of usability.</li>
+</ol>
+
+<h3>Planned Topics</h3>
+<ul>
+<li> Syllabus and Course presentation (1 lecture)</li>
+<li> Introduction to Web Programming (1 lecture)</li>
+<li> Basic Front-end Web Page (HTML, CSS) (5 lectures)</li>
+<li> JavaScript (3 lectures)</li>
+<li> Bootstrap Library (3 lectures)</li>
+<li> Node JS (3 lectures)</li>
+<li> Good Practices - Testing (3 lectures)</li>
+<li> Express Server in Node JS (3 lectures)</li>
+<li> MongoDB persistence with Node (4 lectures)</li>
+<li> Stateful and Stateless (3 lectures)</li>
+<li> Midterm (2 lectures)</li>
+<li> React JS (9 lectures)</li>
+</ul>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-dark text-white p-2">
+            <div class="container text-center">
+                CS456 - Example App - MIT License
+            </div>
+        </footer>
+
+        <!-- It is a common thing on wep pages to import JS at the bottom of the page. That way your website will "load" its visual elements before it gets "stuck" on the code. -->
+        <!-- Bootstrap Javascript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <!-- Other JS scripts also here -->
+        <script>
+
+        </script>
+
+    </body>
+</html>        

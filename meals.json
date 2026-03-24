@@ -1,0 +1,10 @@
+[{"name": "Caitlin Burns", "email": "ceburns1@loyola.edu", "mealType": "Entree", "meal": "Chicken Parmesan"},
+{"name": "John Doe", "email": "johndoe@icloud.com", "mealType": "Appetizer", "meal": "Caesar Salad"},
+{"name": "Jane Doe", "email": "janedoe@gmail.com", "mealType": "Entree", "meal": "Grilled Salmon"},
+{"name": "Emily Evans", "email": "emily@loyola.edu", "mealType": "Dessert", "meal": "Tiramisu"},
+{"name": "Jill Renda", "email": "jill@verizon.net", "mealType": "Side", "meal": "Garlic Mashed Potatoes"},
+{"name": "Michael Smith", "email": "michaelsmith@aol.com", "mealType": "Appetizer", "meal": "Bruschetta"},
+{"name": "Maureen FitzGerald", "email": "maureen@icloud.com", "mealType": "Dessert", "meal": "Chocolate Lava Cake"},
+{"name": "David Lee", "email": "davidlee@gmail.com", "mealType": "Entree", "meal": "Beef Wellington"}]
+
+
